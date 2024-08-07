@@ -44,20 +44,26 @@ int main()
                 printf("The product of %hu and %hu = %hd \n", num1, num2, result);
                 break;
             case 4:
-               if(num2 != 0){
-                   result = num1 / num2;
-                   printf("The quotient of %hu and %hu = %hd \n", num1, num2, result);
-               }else {
-                   printf("Error, division by zero is not allowed!");
-               }
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                    printf("The quotient of %hu and %hu = %hd \n", num1, num2, result);
+                }
+                else
+                {
+                    printf("Error, division by zero is not allowed!");
+                }
                 break;
             case 5:
-               if(num2!=0){
-                   result = num1 % num2;
-                   printf("The remainder of %hu and %hu = %hd \n", num1, num2, result);
-               }else {
-                   printf("Error: Division by zero is not allowed.\n");
-               }
+                if (num2 != 0)
+                {
+                    result = num1 % num2;
+                    printf("The remainder of %hu and %hu = %hd \n", num1, num2, result);
+                }
+                else
+                {
+                    printf("Error: Division by zero is not allowed.\n");
+                }
                 break;
             default:
                 break;
@@ -74,8 +80,11 @@ int main()
             printf("Invalid choice. Please try again.\n");
         }
 
-        printf("Do you want to perform another operation? (y/n): ");
-        scanf(" %c", &continueCalc);
+        if (choice != 6)
+        {
+            printf("Do you want to perform another operation? (y/n): ");
+            scanf(" %c", &continueCalc);
+        }
     }
 
     return 0;
